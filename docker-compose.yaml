@@ -1,0 +1,12 @@
+name: music_downloader
+services:
+  yt-dlp-service:
+    container_name: yt-dlp-flask
+    image: yt-dlp-service:latest
+    volumes:
+      - ${MUSIC_FOLDER_PATH}:/mnt/media/music
+    env_file:
+      - .env
+    ports:
+      - '8000:8000'
+    restart: always
