@@ -6,6 +6,8 @@ from flaskr.core.config_builder import ConfigBuilder
 from flaskr.core.yt_dlp import download_youtube
 from flaskr.model.youtube_form import YoutubeForm
 
+BASE_DIRECTORY = "/mnt/media/music"
+
 app = Flask(__name__)
 
 @app.route("/directories", methods=['GET'])
@@ -35,7 +37,7 @@ def init_yt():
         # need url and directory sanitizers
         url = youtube_form.data.get('url')
         audio_bool = youtube_form.data.get('audio_bool')
-        directory = os.path.join("/mnt/media/music", youtube_form.data.get('directory'))
+        directory = os.path.join(BASE_DIRECTORY, youtube_form.data.get('directory'))
         try:
             config.set_format(audio_only=audio_bool)
             config.set_path(directory)

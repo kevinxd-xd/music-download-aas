@@ -17,7 +17,8 @@ class ConfigBuilder:
                      'only_multi_video': True,
                      'when': 'playlist'}],
             'retries': 10,
-            'warn_when_outdated': True
+            'warn_when_outdated': True,
+            'js_runtimes': {'node': {'path': '/usr/bin/node'}}
         }
 
     # TODO: Not finished, complete as needed
