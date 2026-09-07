@@ -23,5 +23,5 @@ urllib3==2.6.3
 websockets==16.0
 Werkzeug==3.1.6
 WTForms==3.2.1
-yt-dlp==2026.7.4
+yt-dlp==2026.8.19
 yt-dlp-ejs==0.8.0
